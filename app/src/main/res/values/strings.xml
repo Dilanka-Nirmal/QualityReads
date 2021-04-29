@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Quality Reads</string>
+    <string name="signInTitle">Sign In</string>
+    <string name="hiLbl">Hi there! Nice to see you again</string>
+    <string name="emailLbl">E-mail</string>
+    <string name="emailEdt" />
+    <string name="passwordLbl">Password</string>
+    <string name="passwordEdt" />
+    <string name="signInBtn">SIGN IN</string>
+    <string name="forgotPasswordBtn">Forgot Password ?</string>
+    <string name="dontHaveAcctLbl">Do not have an Account?</string>
+    <string name="signUpBtn">Sign Up</string>
+    <string name="signUpTitle">Sign Up</string>
+    <string name="firstNameLbl">First name</string>
+    <string name="lastNameLbl">Last name</string>
+    <string name="firstNameEdt" />
+    <string name="lastNameEdt" />
+    <string name="addressLbl">Address</string>
+    <string name="addressEdt" />
+    <string name="phoneNumberLbl">Phone Number</string>
+    <string name="phoneNumberEdt" />
+    <string name="continueBtn">Continue</string>
+    <string name="haveAnAcctLbl">Have an account ?</string>
+    <string name="forgotPasswordLbl">Forgot Password</string>
+    <string name="newPasswordLbl">New Password</string>
+    <string name="emailForgotPasswordEdt" />
+    <string name="confirmPasswordLbl">Confirm Password</string>
+    <string name="confirmPasswordEdt" />
+    <string name="SplashQuality">Quality</string>
+    <string name="SplashReads">Reads</string>
+    <string name="stockLbl">Stock</string>
+</resources>

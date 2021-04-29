@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "80708490421",
+    "project_id": "quality-reads-bb53a",
+    "storage_bucket": "quality-reads-bb53a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80708490421:android:090c7cc02904693d2adafc",
+        "android_client_info": {
+          "package_name": "com.example.qualityreads"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80708490421-5jld0g4hmf7r9pspn67gjm80k5n5bdl6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.qualityreads",
+            "certificate_hash": "43d1da87d8284ba2e6e7d1c5d82197d6319057b0"
+          }
+        },
+        {
+          "client_id": "80708490421-nsstfu1s9k0db9l8p2mk0r78qtnbsrr6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAoTon-bnM7nJ2Bwp--Q3kl_bfNfgp7Fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80708490421-nsstfu1s9k0db9l8p2mk0r78qtnbsrr6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
