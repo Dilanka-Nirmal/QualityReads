@@ -10,36 +10,37 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
-import models.User;
 
 public class SignIn extends AppCompatActivity {
 
-    EditText phoneEdt, passwordEdt;
+    EditText emailEdt, passwordEdt;
     Button signInBtn, forgotPasswordBtn, signUpBtn;
 
-    DatabaseReference dbRef;
+    FirebaseAuth fireAuth;
+    FirebaseDatabase fireDB = FirebaseDatabase.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        //Check Database Connection
-        //Toast.makeText(SignIn.this,"Firebase connection Success!",Toast.LENGTH_LONG).show();
-
-        phoneEdt = (EditText) findViewById(R.id.phoneEdt);
+        emailEdt = (EditText) findViewById(R.id.emailEdt);
         passwordEdt = (EditText) findViewById(R.id.passwordEdt);
 
         signInBtn = (Button) findViewById(R.id.signInBtn);
         forgotPasswordBtn = (Button) findViewById(R.id.forgotPasswordBtn);
         signUpBtn = (Button) findViewById(R.id.signUpBtn);
+
+        fireAuth = FirebaseAuth.getInstance();
 
 
         //SignUp Button Activate
@@ -62,16 +63,85 @@ public class SignIn extends AppCompatActivity {
             }
         });
 
+        //Login Validation------------------------------------------------------------------------------------------------------------------
+        //Sign In Button Activate
+        signInBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String email;
+                String password;
+
+                if(!validEmail() | !validPassword()){
+                    return;
+                }
+
+                email = emailEdt.getText().toString();
+                password = passwordEdt.getText().toString();
+
+                fireAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            String uid = task.getResult().getUser().getUid();
+
+                            fireDB.getReference().child("user").child(uid).child("userType").addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                                    int userType = snapshot.getValue(Integer.class);
+
+                                    if(userType == 1){
+                                        Toast.makeText(SignIn.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
+                                        Intent i = new Intent(SignIn.this, AdminDashboard.class);
+                                        startActivity(i);
+                                    }else{
+                                        Toast.makeText(SignIn.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
+                                        Intent i = new Intent(SignIn.this, UserSessions.class);
+                                        startActivity(i);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+                        }
+                    }
+                })
+
+            /*addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                    @Override
+                    public void onSuccess(AuthResult authResult) {
+
+                        Toast.makeText(SignIn.this, "Login Successfully!", Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(SignIn.this, UserSessions.class);
+                        startActivity(i);
+                    }
+                })*/
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(SignIn.this, ""+e.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                        });
+            }
+        });
+        /*-----------------------------------------------------------------------------------------------------------------------*/
+
     }
 
-    private boolean validPhone(){
-        String val = phoneEdt.getText().toString();
+    //Form Validations [signInBtn]---------------------------------------------------------------------------------------------
+
+    private boolean validEmail(){
+        String val = emailEdt.getText().toString();
 
         if(val.isEmpty()){
-            phoneEdt.setError("This field cannot be Empty");
+            emailEdt.setError("This field cannot be Empty");
             return false;
         }else{
-            phoneEdt.setError(null);
+            emailEdt.setError(null);
             return true;
         }
     }
@@ -87,46 +157,6 @@ public class SignIn extends AppCompatActivity {
             return true;
         }
     }
-
-
-    //Login Validation------------------------------------------------------------------------------------------------------------------
-    String phoneNo;
-    String password;
-    public void validLogIn(View view) {
-
-        if(!validPhone() | !validPassword()){
-            return;
-        }
-
-        phoneNo = phoneEdt.getText().toString();
-        password = passwordEdt.getText().toString();
-
-        Query checkUser = FirebaseDatabase.getInstance().getReference("user").orderByChild("phoneNumberEdt").equalTo(phoneNo);
-        checkUser.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    String sysPassword = snapshot.child(phoneNo).child("passwordEdtSignUp").getValue(String.class);
-
-                    if (sysPassword.equals(password)) {
-                        passwordEdt.setError(null);
-                        Toast.makeText(SignIn.this, "Login Successful!", Toast.LENGTH_LONG).show();
-
-                    } else {
-                        Toast.makeText(SignIn.this, "Something went wrong, Try again!", Toast.LENGTH_LONG).show();
-                    }
-
-                } else {
-                    Toast.makeText(SignIn.this, "User doesn't exist!", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(SignIn.this, error.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-    /*-----------------------------------------------------------------------------------------------------------------------*/
+    //---------------------------------------------------------------------------------------------------------------------------------
 
 }

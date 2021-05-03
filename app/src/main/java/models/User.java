@@ -2,18 +2,36 @@ package models;
 
 public class User {
 
-    String firstNameEdt, lastNameEdt, addressEdt, phoneNumberEdt, emailEdtSignUp, passwordEdtSignUp;
+    String UID, firstNameEdt, lastNameEdt, addressEdt, phoneNumberEdt, emailEdtSignUp;
+    int userType;
 
     public User() {
     }
 
-    public User(String firstNameEdt, String lastNameEdt, String addressEdt, String phoneNumberEdt, String emailEdtSignUp, String passwordEdtSignUp) {
+    public User(String UID, String firstNameEdt, String lastNameEdt, String addressEdt, String phoneNumberEdt, String emailEdtSignUp, int userType) {
+        this.UID = UID;
         this.firstNameEdt = firstNameEdt;
         this.lastNameEdt = lastNameEdt;
         this.addressEdt = addressEdt;
         this.phoneNumberEdt = phoneNumberEdt;
         this.emailEdtSignUp = emailEdtSignUp;
-        this.passwordEdtSignUp = passwordEdtSignUp;
+        this.userType = userType;
+    }
+
+    public User(String firstNameEdt, String lastNameEdt, String addressEdt, String phoneNumberEdt, String emailEdtSignUp) {
+        this.firstNameEdt = firstNameEdt;
+        this.lastNameEdt = lastNameEdt;
+        this.addressEdt = addressEdt;
+        this.phoneNumberEdt = phoneNumberEdt;
+        this.emailEdtSignUp = emailEdtSignUp;
+    }
+
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
     }
 
     public String getFirstNameEdt() {
@@ -56,11 +74,11 @@ public class User {
         this.emailEdtSignUp = emailEdtSignUp;
     }
 
-    public String getPasswordEdtSignUp() {
-        return passwordEdtSignUp;
+    public int getUserType() {
+        return userType;
     }
 
-    public void setPasswordEdtSignUp(String passwordEdtSignUp) {
-        this.passwordEdtSignUp = passwordEdtSignUp;
+    public void setUserType(int userType) {
+        this.userType = userType;
     }
 }

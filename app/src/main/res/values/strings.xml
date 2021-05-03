@@ -29,4 +29,20 @@
     <string name="SplashQuality">Quality</string>
     <string name="SplashReads">Reads</string>
     <string name="stockLbl">Stock</string>
+    <string name="acctTitle">Account</string>
+    <string name="userAcctBtn">USER ACCOUNT</string>
+    <string name="addCardBtn">ADD CARD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="updateProfileBtn">UPDATE PROFILE</string>
+    <string name="cardHolderNameLbl">Cardholder name</string>
+    <string name="cardHolderNameEdt" />
+    <string name="cardNumberLbl">Card number</string>
+    <string name="cardNumberEdt" />
+    <string name="expiryDateLbl">Expiry date</string>
+    <string name="expiriDateEdt" />
+    <string name="updateCardBtn">Update</string>
+    <string name="deleteCardBtn">Delete</string>
+    <string name="note">Note : After press the continue button, We will send an email to your email account.</string>
+    <string name="addBtn">ADD</string>
 </resources>
