@@ -64,6 +64,7 @@ public class UserAccount extends Fragment {
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("user").child(fireUser.getUid());
 
+        //View account details--------------------------------------------------------------------------------------
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -84,7 +85,9 @@ public class UserAccount extends Fragment {
 
             }
         });
+        //-----------------------------------------------------------------------------------------------------------
 
+        //Update profile details-------------------------------------------------------------------------------------
         updateProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,6 +128,7 @@ public class UserAccount extends Fragment {
                 });
             }
         });
+        //--------------------------------------------------------------------------------------------------------------
 
 
         return view;

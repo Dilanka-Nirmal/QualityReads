@@ -43,6 +43,10 @@
     <string name="expiriDateEdt" />
     <string name="updateCardBtn">Update</string>
     <string name="deleteCardBtn">Delete</string>
-    <string name="note">Note : After press the continue button, We will send an email to your email account.</string>
+    <string name="note">Note : After pressing the continue button, We will send an email to your email account.</string>
     <string name="addBtn">ADD</string>
+    <string name="paymentTitle">Payment Confirmation</string>
+    <string name="totalVal">Total :</string>
+    <string name="cvv">CVV</string>
+    <string name="payBtn">PAY</string>
 </resources>
