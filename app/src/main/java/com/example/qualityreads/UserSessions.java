@@ -34,6 +34,11 @@ public class UserSessions extends AppCompatActivity {
                     selectedFragment = new Account();
                     break;
 
+            //This nav used for testing payment confirmation
+                case R.id.nav_cart:
+                    selectedFragment = new PaymentConfirmation();
+                    break;
+
              //For other Fragments
                 /*case R.id.nav_account:
                     selectedFragment = new Account();
