@@ -14,7 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import models.User;
@@ -151,7 +150,10 @@ public class SignUp extends AppCompatActivity {
         if (val.isEmpty()) {
             phoneNumberEdt.setError("This field cannot be Empty");
             return false;
-        } else {
+        } else if(val.length() > 10){
+            phoneNumberEdt.setError("Invalid phone number");
+            return false;
+        }else {
             phoneNumberEdt.setError(null);
             return true;
         }

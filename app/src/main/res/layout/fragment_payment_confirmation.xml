@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PaymentConfirmation">
+    tools:context=".UserSession.PaymentConfirmation">
 
     <TextView
         android:id="@+id/textView17"
@@ -74,6 +74,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="33dp"
         android:ems="10"
+        android:hint="Enter cardholder name"
         android:inputType="textPersonName"
         android:text="@string/cardHolderNameEdt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,6 +89,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="33dp"
         android:ems="10"
+        android:hint="Enter card number"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +103,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="18dp"
         android:ems="10"
+        android:hint="mm/yy"
         android:inputType="date"
         app:layout_constraintEnd_toStartOf="@+id/cvvPay"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,6 +115,7 @@
         android:layout_height="45dp"
         android:layout_marginEnd="33dp"
         android:ems="10"
+        android:hint="XXX"
         android:inputType="date"
         app:layout_constraintBaseline_toBaselineOf="@+id/expiryDatePay"
         app:layout_constraintEnd_toEndOf="parent" />

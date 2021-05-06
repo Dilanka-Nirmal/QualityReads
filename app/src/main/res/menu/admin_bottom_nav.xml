@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_adminAcct"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Admin" />
+
+    <item android:id="@+id/nav_stockMng"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="Stock" />
+
+    <item android:id="@+id/nav_orderMng"
+        android:icon="@drawable/ic_baseline_assignment_24"
+        android:title="Order" />
+
+    <item android:id="@+id/nav_deliveryMng"
+        android:icon="@drawable/ic_baseline_local_shipping_24"
+        android:title="Delivery" />
+</menu>

@@ -1,4 +1,4 @@
-package com.example.qualityreads;
+package com.example.qualityreads.UserSession;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.qualityreads.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UserSessions extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class UserSessions extends AppCompatActivity {
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         //@This Should be change------------------------------------
-        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Account()).commit();
+        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, //new Account()).commit();
 
     }
 

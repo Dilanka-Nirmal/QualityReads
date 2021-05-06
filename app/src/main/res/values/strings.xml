@@ -49,4 +49,9 @@
     <string name="totalVal">Total :</string>
     <string name="cvv">CVV</string>
     <string name="payBtn">PAY</string>
+    <string name="logOut">LOGOUT</string>
+    <string name="title_activity_admin_sessions">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

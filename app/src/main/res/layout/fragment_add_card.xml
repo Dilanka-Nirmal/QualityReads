@@ -5,7 +5,7 @@
     android:id="@+id/addCardLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCard">
+    tools:context=".UserSession.AddCard">
 
 
     <TextView
@@ -52,6 +52,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="Enter cardholder name"
         android:inputType="textPersonName"
         android:text="@string/cardHolderNameEdt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +68,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="mm/yy"
         android:inputType="date"
         android:text="@string/expiriDateEdt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,6 +107,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="Enter card number"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"

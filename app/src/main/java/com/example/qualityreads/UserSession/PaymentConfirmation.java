@@ -1,4 +1,4 @@
-package com.example.qualityreads;
+package com.example.qualityreads.UserSession;
 
 import android.os.Bundle;
 
@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.qualityreads.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -76,7 +77,26 @@ public class PaymentConfirmation extends Fragment {
         });
         //-----------------------------------------------------------------------------------------------------------------------------------------
 
-
         return view;
     }
+
+    //Form Validations------------------------------------------------------------------------------------------------------------------------
+    private boolean validCvv() {
+        String val = cvvPay.getText().toString();
+
+        if (val.isEmpty()) {
+            cvvPay.setError("This field cannot be Empty");
+            return false;
+        } else if(val.length() > 3){
+            cvvPay.setError("Invalid CVV number");
+            return false;
+        }else if(val.length() < 3){
+            cvvPay.setError("Invalid CVV number");
+            return false;
+        } else {
+            cvvPay.setError(null);
+            return true;
+        }
+    }
+    //------------------------------------------------------------------------------------------------------------------------------------------
 }

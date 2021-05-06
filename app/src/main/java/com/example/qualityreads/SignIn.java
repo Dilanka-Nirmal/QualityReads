@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.qualityreads.AdminSession.AdminSessions;
+import com.example.qualityreads.UserSession.UserSessions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -53,6 +55,7 @@ public class SignIn extends AppCompatActivity {
             }
         });
 
+
         //Forgot Password Button Activate
         forgotPasswordBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -72,7 +75,7 @@ public class SignIn extends AppCompatActivity {
                 String email;
                 String password;
 
-                if(!validEmail() | !validPassword()){
+                if (!validEmail() | !validPassword()) {
                     return;
                 }
 
@@ -82,7 +85,7 @@ public class SignIn extends AppCompatActivity {
                 fireAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             String uid = task.getResult().getUser().getUid();
 
                             fireDB.getReference().child("user").child(uid).child("userType").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -91,11 +94,11 @@ public class SignIn extends AppCompatActivity {
 
                                     int userType = snapshot.getValue(Integer.class);
 
-                                    if(userType == 1){
+                                    if (userType == 1) {
                                         Toast.makeText(SignIn.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
-                                        Intent i = new Intent(SignIn.this, AdminDashboard.class);
+                                        Intent i = new Intent(SignIn.this, AdminSessions.class);
                                         startActivity(i);
-                                    }else{
+                                    } else {
                                         Toast.makeText(SignIn.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
                                         Intent i = new Intent(SignIn.this, UserSessions.class);
                                         startActivity(i);
@@ -110,20 +113,10 @@ public class SignIn extends AppCompatActivity {
                         }
                     }
                 })
-
-            /*addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                    @Override
-                    public void onSuccess(AuthResult authResult) {
-
-                        Toast.makeText(SignIn.this, "Login Successfully!", Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(SignIn.this, UserSessions.class);
-                        startActivity(i);
-                    }
-                })*/
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(SignIn.this, ""+e.getMessage(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignIn.this, "" + e.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         });
             }
@@ -134,25 +127,25 @@ public class SignIn extends AppCompatActivity {
 
     //Form Validations [signInBtn]---------------------------------------------------------------------------------------------
 
-    private boolean validEmail(){
+    private boolean validEmail() {
         String val = emailEdt.getText().toString();
 
-        if(val.isEmpty()){
+        if (val.isEmpty()) {
             emailEdt.setError("This field cannot be Empty");
             return false;
-        }else{
+        } else {
             emailEdt.setError(null);
             return true;
         }
     }
 
-    private boolean validPassword(){
+    private boolean validPassword() {
         String val = passwordEdt.getText().toString();
 
-        if(val.isEmpty()){
+        if (val.isEmpty()) {
             passwordEdt.setError("This field cannot be Empty");
             return false;
-        }else{
+        } else {
             passwordEdt.setError(null);
             return true;
         }

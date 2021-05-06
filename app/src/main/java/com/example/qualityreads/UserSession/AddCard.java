@@ -1,4 +1,4 @@
-package com.example.qualityreads;
+package com.example.qualityreads.UserSession;
 
 import android.os.Bundle;
 
@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.qualityreads.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -97,7 +98,6 @@ public class AddCard extends Fragment {
 
 
         //Delete card----------------------------------------------------------------------------------------------------------------------------
-
         deleteCardBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,9 +105,9 @@ public class AddCard extends Fragment {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if (snapshot.exists()) {
-                            //dbRef = FirebaseDatabase.getInstance().getReference().child("user").child(fireUser.getUid()).child("card");
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("user").child(fireUser.getUid()).child("card");
                             dbRef.removeValue();
-                            //clearControls();
+
                             Toast.makeText(getActivity(), "Your card details remove from account!", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getActivity(), "No source to delete...", Toast.LENGTH_SHORT).show();
@@ -121,13 +121,10 @@ public class AddCard extends Fragment {
                 });
             }
         });
-
-
         //---------------------------------------------------------------------------------------------------------------------------------------
 
 
         //Card view -----------------------------------------------------------------------------------------------------------------------------
-
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -152,6 +149,7 @@ public class AddCard extends Fragment {
     }
 
 
+    //Form Validations------------------------------------------------------------------------------------------------------------------------
     private boolean validCardHolderName() {
         String val = cardHolderNameEdt.getText().toString();
 
@@ -170,6 +168,12 @@ public class AddCard extends Fragment {
         if (val.isEmpty()) {
             cardNumberEdt.setError("This field cannot be Empty");
             return false;
+        }else if(val.length() > 16){
+            cardNumberEdt.setError("Invalid card number");
+            return false;
+        } else if(val.length() < 16){
+            cardNumberEdt.setError("Invalid card number");
+            return false;
         } else {
             cardNumberEdt.setError(null);
             return true;
@@ -182,10 +186,17 @@ public class AddCard extends Fragment {
         if (val.isEmpty()) {
             expiryDateEdt.setError("This field cannot be Empty");
             return false;
-        } else {
+        } else if(val.length() < 5){
+            expiryDateEdt.setError("Invalid expiry date");
+            return false;
+        }else if(val.length() > 5){
+            expiryDateEdt.setError("Invalid card number");
+            return false;
+        }else {
             expiryDateEdt.setError(null);
             return true;
         }
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------
 }
 

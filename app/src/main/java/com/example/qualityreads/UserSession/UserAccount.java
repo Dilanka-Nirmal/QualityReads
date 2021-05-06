@@ -1,10 +1,10 @@
-package com.example.qualityreads;
+package com.example.qualityreads.UserSession;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,7 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.signin.SignInOptions;
+import com.example.qualityreads.R;
+import com.example.qualityreads.SignIn;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,7 +35,7 @@ import models.User;
 public class UserAccount extends Fragment {
 
     EditText firstNameUpdt, lastNameUpdt, addressUpdt, phoneNumberUpdt, emailUpdt, uidUpdt;
-    Button updateProfileBtn;
+    Button updateProfileBtn, logOut;
 
     FirebaseAuth fireAuth;
     FirebaseUser fireUser;
@@ -58,6 +59,7 @@ public class UserAccount extends Fragment {
         uidUpdt = view.findViewById(R.id.uidUpdt);
 
         updateProfileBtn = view.findViewById(R.id.updateProfileBtn);
+        logOut = view.findViewById(R.id.logOut);
 
         fireAuth = FirebaseAuth.getInstance();
         fireUser = fireAuth.getCurrentUser();
@@ -91,6 +93,11 @@ public class UserAccount extends Fragment {
         updateProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (!validFirstName() | !validLastName() | !validAddress() | !validPhoneNo() | !validEmail()) {
+                    return;
+                }
+
                 dbRef.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -130,9 +137,86 @@ public class UserAccount extends Fragment {
         });
         //--------------------------------------------------------------------------------------------------------------
 
+        //Logout -------------------------------------------------------------------------------------------------------------
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Logout Successfully!", Toast.LENGTH_SHORT).show();
+                fireAuth.signOut();
+                Intent i = new Intent(getActivity(), SignIn.class);
+                startActivity(i);
+
+            }
+        });
+        //--------------------------------------------------------------------------------------------------------------------
 
         return view;
     }
+
+    //Form Validations-----------------------------------------------------------------------------------------------------------
+    private boolean validFirstName() {
+        String val = firstNameUpdt.getText().toString();
+
+        if (val.isEmpty()) {
+            firstNameUpdt.setError("This field cannot be Empty");
+            return false;
+        } else {
+            firstNameUpdt.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validLastName() {
+        String val = lastNameUpdt.getText().toString();
+
+        if (val.isEmpty()) {
+            lastNameUpdt.setError("This field cannot be Empty");
+            return false;
+        } else {
+            lastNameUpdt.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validAddress() {
+        String val = addressUpdt.getText().toString();
+
+        if (val.isEmpty()) {
+            addressUpdt.setError("This field cannot be Empty");
+            return false;
+        } else {
+            addressUpdt.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validPhoneNo() {
+        String val = phoneNumberUpdt.getText().toString();
+
+        if (val.isEmpty()) {
+            phoneNumberUpdt.setError("This field cannot be Empty");
+            return false;
+        } else if(val.length() > 10){
+            phoneNumberUpdt.setError("Invalid phone number");
+            return false;
+        }else {
+            phoneNumberUpdt.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validEmail() {
+        String val = emailUpdt.getText().toString();
+
+        if (val.isEmpty()) {
+            emailUpdt.setError("This field cannot be Empty");
+            return false;
+        } else {
+            emailUpdt.setError(null);
+            return true;
+        }
+    }
+    //------------------------------------------------------------------------------------------------------------------
 
 
 }

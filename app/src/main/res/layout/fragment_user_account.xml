@@ -5,7 +5,7 @@
     android:id="@+id/userAccountLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserAccount">
+    tools:context=".UserSession.UserAccount">
 
     <TextView
         android:id="@+id/textView26"
@@ -73,6 +73,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="First name"
         android:inputType="textPersonName"
         android:text="@string/firstNameEdt"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +85,7 @@
         android:layout_height="46dp"
         android:layout_marginEnd="17dp"
         android:ems="10"
+        android:hint="Last name"
         android:inputType="textPersonName"
         android:text="@string/lastNameEdt"
         app:layout_constraintBaseline_toBaselineOf="@+id/firstNameUpdt"
@@ -97,6 +99,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="Address"
         android:inputType="textPersonName"
         android:text="@string/addressEdt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,6 +115,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:text="@string/emailEdt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,14 +125,13 @@
 
     <Button
         android:id="@+id/updateProfileBtn"
-        android:layout_width="192dp"
+        android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="26dp"
-        android:text="@string/updateProfileBtn"
+        android:text="@string/updateCardBtn"
         android:textStyle="bold"
-        app:backgroundTint="#FF0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:backgroundTint="#1DB40D"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailUpdt" />
 
@@ -140,6 +143,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="Phone number"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +158,20 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="598dp" />
+        app:layout_constraintTop_toBottomOf="@+id/updateProfileBtn" />
+
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/logOut"
+        android:textStyle="bold"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailUpdt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
