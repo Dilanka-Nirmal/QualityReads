@@ -127,7 +127,7 @@ public class SignIn extends AppCompatActivity {
 
     //Form Validations [signInBtn]---------------------------------------------------------------------------------------------
 
-    private boolean validEmail() {
+    boolean validEmail() {
         String val = emailEdt.getText().toString();
 
         if (val.isEmpty()) {
@@ -139,7 +139,7 @@ public class SignIn extends AppCompatActivity {
         }
     }
 
-    private boolean validPassword() {
+    boolean validPassword() {
         String val = passwordEdt.getText().toString();
 
         if (val.isEmpty()) {

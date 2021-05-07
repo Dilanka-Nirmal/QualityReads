@@ -12,22 +12,4 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
-
-    //private SignIn signIn;
-
-    @BeforeClass
-    public static void beforeClass() throws Exception {
-
-    }
-
-    @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
-    }
-
-
-    @AfterClass
-    public static void afterClass() throws Exception {
-
-    }
 }
