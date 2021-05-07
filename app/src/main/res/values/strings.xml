@@ -48,11 +48,12 @@
     <string name="paymentTitle">Payment Confirmation</string>
     <string name="totalVal">Total :</string>
     <string name="cvv">CVV</string>
-    <string name="payBtn">PAY</string>
+    <string name="payBtn">PAY NOW</string>
     <string name="logOut">LOGOUT</string>
     <string name="title_activity_admin_sessions">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="validPayTitle">Payment is Successful!</string>
+    <string name="LKR">Rs.</string>
 </resources>
