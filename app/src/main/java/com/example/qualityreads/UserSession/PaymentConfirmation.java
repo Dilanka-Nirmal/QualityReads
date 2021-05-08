@@ -117,7 +117,7 @@ public class PaymentConfirmation extends Fragment {
                                     Toast.makeText(getActivity(), "Payment Successfully!", Toast.LENGTH_SHORT).show();
 
                                 } else {
-                                    Toast.makeText(getActivity(), "Your account balance is not insufficient for complete this payment", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), "Your account balance is not sufficient for complete this payment", Toast.LENGTH_SHORT).show();
                                 }
 
                             } else {
