@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QualityReads"
-        android:networkSecurityConfig="@xml/network_security_config">
+        android:networkSecurityConfig="@xml/network_security_config"> <!-- The Network Security Configuration feature lets apps customize their network
+        security settings in a safe, declarative configuration file without modifying app code. -->
 
         <activity android:name=".AdminSession.AdminSessions"
-            android:windowSoftInputMode="adjustPan">
+            android:windowSoftInputMode="adjustPan"><!--The activity's main window is not resized to make room for the soft keyboard.
+             Rather, the contents of the window are automatically panned so that the current focus is never obscured by the
+             keyboard and users can always see what they are typing. This is generally less desirable than resizing,
+            because the user may need to close the soft keyboard to get at and interact with obscured parts of the window.-->
         </activity>
         <activity android:name=".SplashScreen">
             <intent-filter>
