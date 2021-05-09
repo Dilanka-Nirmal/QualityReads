@@ -111,9 +111,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/add"
                 android:background="@drawable/buttonbg2"
-                app:backgroundTint="@color/button2" />
+                android:text="@string/add"
+                app:backgroundTint="#DB4236" />
 
         </LinearLayout>
     </ScrollView>

@@ -27,7 +27,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/buttonbg2"
         android:text="@string/new_driver"
-        app:backgroundTint="@color/button2" />
+        app:backgroundTint="#DB4236" />
 
     <ListView
         android:id="@+id/driverlist"

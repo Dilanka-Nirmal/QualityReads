@@ -97,7 +97,7 @@
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
                 android:text="@string/assign"
-                app:backgroundTint="@color/button2" />
+                app:backgroundTint="#DB4236" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -137,7 +137,7 @@
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
                 android:text="@string/assign"
-                app:backgroundTint="@color/button2" />
+                app:backgroundTint="#DB4236" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -177,7 +177,7 @@
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
                 android:text="@string/assign"
-                app:backgroundTint="@color/button2" />
+                app:backgroundTint="#DB4236" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -217,7 +217,7 @@
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
                 android:text="@string/assign"
-                app:backgroundTint="@color/button2" />
+                app:backgroundTint="#DB4236" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -257,7 +257,7 @@
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
                 android:text="@string/assign"
-                app:backgroundTint="@color/button2" />
+                app:backgroundTint="#DB4236" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -101,7 +101,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/buttonbg2"
                 android:text="@string/update"
-                app:backgroundTint="@color/button2" />
+                app:backgroundTint="#DB4236" />
 
 
         </LinearLayout>
