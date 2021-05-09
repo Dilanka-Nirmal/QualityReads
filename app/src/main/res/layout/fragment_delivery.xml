@@ -40,7 +40,8 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="OID3456"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -52,7 +53,7 @@
 
             <Button
                 android:id="@+id/assign"
-                android:layout_width="match_parent"
+                android:layout_width="144dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
@@ -80,7 +81,8 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="OID2345"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -92,7 +94,7 @@
 
             <Button
                 android:id="@+id/bautton2"
-                android:layout_width="match_parent"
+                android:layout_width="144dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
@@ -120,7 +122,8 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="OID5678"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -132,7 +135,7 @@
 
             <Button
                 android:id="@+id/budtton2"
-                android:layout_width="match_parent"
+                android:layout_width="144dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
@@ -160,7 +163,8 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="OID2111"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -172,7 +176,7 @@
 
             <Button
                 android:id="@+id/bugtton2"
-                android:layout_width="match_parent"
+                android:layout_width="144dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
@@ -200,7 +204,8 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="OID4433"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -212,7 +217,7 @@
 
             <Button
                 android:id="@+id/bhutton2"
-                android:layout_width="match_parent"
+                android:layout_width="144dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
@@ -240,7 +245,8 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="OID3377"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -252,7 +258,7 @@
 
             <Button
                 android:id="@+id/butkton2"
-                android:layout_width="match_parent"
+                android:layout_width="144dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonbg2"
                 android:gravity="center"
