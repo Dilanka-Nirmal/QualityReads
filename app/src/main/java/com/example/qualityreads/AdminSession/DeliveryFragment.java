@@ -56,36 +56,5 @@ public class DeliveryFragment extends Fragment {
         return v1;
 
 
-
-
-
-
-
-/*
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        menu.clear();
-
-        inflater.inflate(R.menu.menu_add_app, menu);
-        MenuItem item = menu.findItem(R.id.action_search_menu_add_app);
-        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW | MenuItem.SHOW_AS_ACTION_IF_ROOM);
-
-        SearchView searchView = (SearchView) ((MenuItem) item).getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                // Here is where we are going to implement the filter logic
-                return true;
-            }
-
-        });
-    }*/
     }
 }
