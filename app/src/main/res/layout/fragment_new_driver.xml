@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewDriverFragment">
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/add_new_driver"
+        android:textColor="#DB4236"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:id="@+id/capturedriver"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/driver"
+        app:civ_border_color="@color/purple_700"
+        app:civ_border_width="5dp" />
+
+            <EditText
+                android:id="@+id/did"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/uname"
+                android:hint="Driver ID"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/dname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/uname"
+                android:hint="@string/driver_name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/demail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/email"
+                android:hint="@string/driver_email"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/dvehicleNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/vehicleno"
+                android:hint="@string/vehicle_no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/dcontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/call"
+                android:hint="@string/contact_no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/daddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/home"
+                android:hint="@string/address"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/addd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/add"
+                android:background="@drawable/buttonbg2"
+                app:backgroundTint="@color/button2" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
