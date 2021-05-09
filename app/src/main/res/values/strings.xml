@@ -56,4 +56,27 @@
     <string name="title_notifications">Notifications</string>
     <string name="validPayTitle">Payment is Successful!</string>
     <string name="LKR">Rs.</string>
+
+    <!--    Inventory     -->
+    <string name="homeTitle">Home</string>
+    <string name="inventoryTitle">Inventory</string>
+    <string name="addNewBookTitle">Add a new book</string>
+    <string name="update_deleteBookTitle">Update or Delete</string>
+    <string name="quantity">Qty:</string>
+    <string name="textViewName">Name:</string>
+    <string name="textViewIsbn">ISBN:</string>
+    <string name="textViewCategory">Category:</string>
+    <string name="textViewPagination">Pagination:</string>
+    <string name="textViewPublisher">Publisher:</string>
+    <string name="textViewPublished_date">Published date:</string>
+    <string name="textViewPrice">Price:</string>
+    <string name="textViewDescription">Description:</string>
+    <string name="add_button">Add</string>
+    <string name="update_button">Update</string>
+    <string name="delete_button">Delete</string>
+    <string name="add_to_cart_button">Add to cart</string>
+    <string name="select_image">Select image</string>
+    <string name="sample_book_title">Sample book title</string>
+    <string name="isbn">ISBN</string>
+    <string name="choose_image">Choose image</string>
 </resources>

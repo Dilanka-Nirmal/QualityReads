@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ic_baseline_account_circle_24">image1</style>
+
+    <style name="ic_baseline_storage_24">image2</style>
+
+    <style name="ic_baseline_assignment_24">image3</style>
+
+    <style name="ic_baseline_local_shipping_24">image4</style>
+
+    <color name="colorPrimary">#FF3030</color>
+    <color name="colorPrimaryDark">#FF3035</color>
+    <color name="colorAccent">#FC1706</color>
+</resources>

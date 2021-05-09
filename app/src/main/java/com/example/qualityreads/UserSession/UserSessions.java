@@ -20,8 +20,8 @@ public class UserSessions extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        //@This Should be change------------------------------------
-        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, //new Account()).commit();
+        //Home Appearance
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CustomerFragment()).commit();
 
     }
 
@@ -31,14 +31,18 @@ public class UserSessions extends AppCompatActivity {
             Fragment selectedFragment = null;
 
             switch (item.getItemId()){
+
+                case R.id.nav_stock:
+                    selectedFragment = new CustomerFragment();
+                    break;
+
+
                 case R.id.nav_account:
                     selectedFragment = new Account();
                     break;
 
-            //This nav used for testing payment confirmation
-                case R.id.nav_cart:
-                    selectedFragment = new PaymentConfirmation();
-                    break;
+
+
 
              //For other Fragments
                 /*case R.id.nav_account:

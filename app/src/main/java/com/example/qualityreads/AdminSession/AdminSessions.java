@@ -22,8 +22,8 @@ public class AdminSessions extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.admin_bottom_nav);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        //@This Should be change------------------------------------
-        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, //new Account()).commit();
+        //Admin acct appearance
+        getSupportFragmentManager().beginTransaction().replace(R.id.admin_fragment_container, new UserAccount() ).commit();
 
     }
 
@@ -38,6 +38,10 @@ public class AdminSessions extends AppCompatActivity {
 
                         case R.id.nav_adminAcct:
                             selectedFragment = new UserAccount();
+                            break;
+
+                        case R.id.nav_stockMng:
+                            selectedFragment = new InventoryFragment();
                             break;
 
                     }
