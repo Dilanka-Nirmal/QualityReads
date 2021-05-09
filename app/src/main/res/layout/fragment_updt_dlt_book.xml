@@ -12,7 +12,7 @@
         android:layout_height="34dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.898"
@@ -26,7 +26,7 @@
         android:layout_height="46dp"
         android:ems="10"
         android:inputType="date"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.942"
@@ -40,7 +40,7 @@
         android:layout_height="37dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.924"
@@ -54,7 +54,7 @@
         android:layout_height="38dp"
         android:ems="10"
         android:inputType="number"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
@@ -68,7 +68,7 @@
         android:layout_height="34dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.928"
@@ -82,7 +82,7 @@
         android:layout_height="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
@@ -96,7 +96,7 @@
         android:layout_height="35dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.91"
@@ -262,7 +262,7 @@
         app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
+        app:layout_constraintVertical_bias="0.973" />
 
     <Button
         android:id="@+id/buttonDelete"
@@ -275,7 +275,7 @@
         app:layout_constraintHorizontal_bias="0.748"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
+        app:layout_constraintVertical_bias="0.973" />
 
     <Button
         android:id="@+id/imgBtn"
@@ -292,18 +292,18 @@
 
     <EditText
         android:id="@+id/editTextMultiLineUpdate"
-        android:layout_width="348dp"
-        android:layout_height="58dp"
+        android:layout_width="343dp"
+        android:layout_height="88dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757" />
+        app:layout_constraintVertical_bias="0.84" />
 
     <RelativeLayout
         android:id="@+id/progressWrapper"
