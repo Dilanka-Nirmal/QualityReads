@@ -42,6 +42,10 @@ public class UserSessions extends AppCompatActivity {
                     break;
 
 
+                case R.id.nav_cart:
+                    selectedFragment = new PaymentConfirmation();
+                    break;
+
 
 
              //For other Fragments
